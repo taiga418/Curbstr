@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>drag and drop test 2</title>
+</head>
+<body>
+  <header>Create a sale</header>
+  <section>
+  <div id="image-drop-box"></div>
+  <form id="image-upload-form">
+    <input id="image-upload-input" type="file" multiple="true">
+  </form>
+  </section>
+    <style>
+    div{
+      height:200px;
+      width:200px;
+      border: 2px solid blue;
+      display:inline-block;
+    }
+  </style>
+  <script>
+var setUpDropBox = function() {
+  var imageDropBox = document.getElementById("image-drop-box");
+  imageDropBox.imageCount = 0;
+  imageDropBox.imageWidth = 200;
+  imageDropBox.imageHeight = 200;
+
+  imageDropBox.addEventListener(
+    "dragenter",
+    function(e) {
+      e.preventDefault();
+      imageDropBox.style.border = "2px solid red";
+    },
+    false);
+
+  imageDropBox.addEventListener(
+    "dragover",
+    function(e) {
+      e.preventDefault();
+    },
+    false);
+
+  imageDropBox.addEventListener(
+    "dragleave",
+    function(e) {
+      e.preventDefault();
+      imageDropBox.style.border = "2px solid blue";//create a function turn on / off highlight
+    },
+    false);
+
+  imageDropBox.addEventListener(
+    "drop",
+    function(e) {
+      /* Images can be dropped here in two ways:
+       * 1. Dragged from desktop. May be multiple images in this case.
+       * 2. Dragged from within this image box to re-arrange.
+       * To determine which case it is, check if there is text data in the
+       * dataTransfer object, if so it is the id of the image being re-arranged.
+       */
+      console.log('DROPPED');
+      e.preventDefault();
+      var imageId = e.dataTransfer.getData("text");
+      if (imageId) {
+        console.log('RE_ORDERED!')
+      }
+      else {
+        var files = getFiles(e);
+        for (var i =0; i <files.length; ++i){
+          loadImage(files[i]);
+        };
+      }
+      imageDropBox.style.border = "2px solid blue";
+      // Still need to send to server
+    },
+    false);
+
+  imageDropBox.addImage = function(image) {
+    ++imageDropBox.imageCount;
+    imageDropBox.style.width =
+        imageDropBox.imageWidth * imageDropBox.imageCount + "px";
+
+    imageDropBox.appendChild(image);
+  };
+
+  var getFiles = function(e) {
+    return e.dataTransfer.files;//built-in returns a list of files.
+  };
+
+  var loadImage = function(file) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      var image = new Image();
+      image.id = "image-" + imageDropBox.imageCount + 1;
+      image.src = e.target.result;
+      image.width = imageDropBox.imageWidth;
+      image.height = imageDropBox.imageHeight;
+      // image.style.transform = "rotate(90deg)";
+      //image.addEventListener("dragstart", imageDragStart);
+      //image.addEventListener("drag", imageDrag);
+      //image.addEventListener("dragend", imageDragEnd);
+      imageDropBox.addImage(image);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  var imageDragStart = function(e) {
+    //e.preventDefault();
+    console.log('dragstart');
+    e.dataTransfer.setData("text", e.target.id);
+    //e.target.style.opacity = "0.5";
+  };
+
+  var imageDrag = function(e) {
+    e.preventDefault();
+    console.log('drag');
+  };
+
+  var imageDragEnd = function(e) {
+    e.preventDefault();
+    console.log('dragend');
+  };
+};
+var main = function() {
+  setUpDropBox();
+  console.log("OK ready!");
+};
+window.onload = main;
+
+/*
+Events fired on the draggable target (the source element):
+ondragstart - occurs when the user starts to drag an element
+ondrag - occurs when an element is being dragged
+ondragend - occurs when the user has finished dragging the element
+
+Events fired on the drop target:
+ondragenter - occurs when the dragged element enters the drop target
+ondragover - occurs when the dragged element is over the drop target
+ondragleave - occurs when the dragged element leaves the drop target
+ondrop - occurs when the dragged element is dropped on the drop target
+*/
+  </script>
+</body>
+</html>
+
+

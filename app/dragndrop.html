@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1, #div2{
+  float:left;
+  width:100px;
+  height:100px;
+  margin:10px;
+  padding:10px;
+  border:1px
+  solid #aaaaaa;}
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+
+//this is a function that religns images after drag and drop. it takes in an starting index and an ending index and the array. instead of swap.
+//test, drag is > drop. increase order
+var drag_drop = function(array, drag_i, drop_i){
+  if(drag_i > drop_i){
+    temp = array[drag_i];
+    for(var i = drag_i; i > drop_i; --i){
+      array[i] = array[i-1];
+    }
+    array[drop_i] = temp;
+    return array;
+  }
+  else if(drag_i < drop_i){
+    temp = array[drag_i];
+    for(var i = drag_i; i < drop_i; ++i){
+      array[i] = array[i+1];
+    }
+    array[drop_i] = temp;
+    return array;
+  }
+};
+
+}
+</script>
+</head>
+<body>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="https://developers.google.com/_static/2516b344f5/images/developers-logo.svg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=40" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+</div>
+
+</body>
+</html>

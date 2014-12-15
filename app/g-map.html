@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>google-maps</title>
+</head>
+<body>
+  <iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAiLwNYxiu9DPAP0Pkuqmxe4qpS_UGbdMA
+    &q=910+8th+ave,Seattle+WA">
+  <!-- to feed to the location, only need to change line 14 and replace the spaces with +. -->
+</iframe>
+</body>
+</html>
+
+<style>
+/*just some styling. waiting to be incorporated
+*/
+
+iframe{
+  -webkit-box-shadow: 7px 7px 12px 0px rgba(16, 255, 170, 0.7);
+  -moz-box-shadow:    7px 7px 12px 0px rgba(16, 255, 170, 0.7);
+  box-shadow:         7px 7px 12px 0px rgba(16, 255, 170, 0.7);
+}
+</style>
+
+<script>
+//<!--turns "910 8th ave" to "910+8th+ave"-->
+var to_map_string = function(str){
+  var array = str.split(" ");
+  var result = array.join("+");
+  return result;
+}
+</script>
