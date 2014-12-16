@@ -2,13 +2,15 @@
 @import '_global/base';
 @import '_global/variables';
 @import '_global/icons';
-@import '_global/base';
-@import '_global/icons';
 // components
 @import '_component/buttons';
 @import '_component/modal';
 @import '_component/home';
 @import '_component/results';
+@import '_component/error1';
+@import '_component/error2';
+@import '_component/error3';
+@import '_component/error4';
 // layouts
 @import '_layout/grid';
 // mixins
@@ -22,4 +24,5 @@
 @import '_mixin/icons-mixin';
 // utility
 @import '_utility/em-function';
-
+//font
+@import "/Library/Ruby/Gems/2.0.0/gems/font-awesome-sass-4.2.2/assets/stylesheets/font-awesome";

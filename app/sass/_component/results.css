@@ -13,6 +13,12 @@
   .flex-container {
     width: 100%;
     -moz-box-sizing: border-box; } }
+@font-face {
+  font-family: "FontAwesome";
+  src: url("../fonts/fonts/fontawesome-webfont.eot");
+  src: url("../fonts/fonts/fontawesome-webfont.eot") format("embedded-opentype"), url("../fonts/fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fonts/fontawesome-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 table {
   text-align: left; }
 
@@ -142,7 +148,41 @@ h4[data-icon="close"] {
     speak: none; }
 
 #map-canvas {
+  width: 800px;
+  min-height: 800px;
+  padding-right: 80px; }
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+#result_bottom {
+  height: 1.2em;
   width: 500px;
-  height: 400px; }
+  background-color: #ff6666;
+  text-align: right;
+  font-size: 2em;
+  color: white; }
+  #result_bottom:after {
+    content: "";
+    font-family: 'FontAwesome', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    padding-right: 10px;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    speak: none; }
+  #result_bottom:before {
+    content: "";
+    font-family: 'FontAwesome', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    padding-right: 10px;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    speak: none; }
 
 /*# sourceMappingURL=results.css.map */

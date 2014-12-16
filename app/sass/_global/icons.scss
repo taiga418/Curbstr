@@ -1,10 +1,21 @@
-// Font Icon Source
-@font-face {
-  font-family: 'FontAwesome', sans-serif;
-  src: url('http://netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts');
-}
 
+// Font Icon Source
+// @font-face {
+//   font-family: 'FontAwesome', sans-serif;
+//   src: url(://netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts);
+// }
+@font-face {
+font-family: "FontAwesome";
+src: url("../fonts/fonts/fontawesome-webfont.eot");
+src: url("../fonts/fonts/fontawesome-webfont.eot") format("embedded-opentype"),
+url("../fonts/fonts/fontawesome-webfont.woff") format("woff"),
+url("../fonts/fonts/fontawesome-webfont.ttf") format("truetype"),
+url("../fonts/fonts/fontawesome-webfont.svg") format("svg");
+font-weight: normal;
+font-style: normal;
+}
 // Font Icon Sass Map
+
 $icons: (
   plus: "\f055",
   minus: "\f056",
@@ -21,7 +32,7 @@ $icons: (
   tag: "\f02b",
   tags: "\f02c",
   upload: "\f0ee",
-  edit: "\f040"
+  edit: "\f040",
 );
 
 // Base styles for font icons

@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AACA,UAGC;EAFC,WAAW,EAAE,yBAAyB;EACtC,GAAG,EAAE,8DAA8D",
+"mappings": "AAMA,UASC;EARD,WAAW,EAAE,aAAa;EAC1B,GAAG,EAAE,6CAA6C;EAClD,GAAG,EAAE,uQAAyE;EAI9E,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM",
 "sources": ["icons.scss"],
 "names": [],
 "file": "icons.css"

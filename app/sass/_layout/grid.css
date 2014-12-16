@@ -7,6 +7,7 @@
 /*  COLUMN SETUP  */
 .col {
   display: block;
+  float: left;
   margin: 1% 0 1% 2%; }
 
 .col:first-child {
@@ -15,7 +16,11 @@
 /*  GROUPING  */
 .group:before,
 .group:after {
-  content: ""; }
+  content: "";
+  display: table; }
+
+.group:after {
+  clear: both; }
 
 .group {
   zoom: 1;
