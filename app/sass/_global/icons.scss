@@ -5,6 +5,7 @@
 //   src: url(://netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts);
 // }
 @font-face {
+<<<<<<< HEAD
 font-family: "FontAwesome";
 src: url("../fonts/fonts/fontawesome-webfont.eot");
 src: url("../fonts/fonts/fontawesome-webfont.eot") format("embedded-opentype"),
@@ -18,6 +19,14 @@ font-style: normal;
 
 $icons: (
   plus: "\f055",
+=======
+  font-family: 'FontAwesome', sans-serif;
+  src: url('http://netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts');
+};
+
+// Font Icon Sass Map
+$icons: ( plus: "\f055" );
+>>>>>>> 4b7b88fcc81437e5ea88f502635d95240b3b0042
   minus: "\f056",
   arrow-down: "\f063",
   arrow-up: "\f062",
@@ -32,12 +41,18 @@ $icons: (
   tag: "\f02b",
   tags: "\f02c",
   upload: "\f0ee",
+<<<<<<< HEAD
   edit: "\f040",
 );
 
 // Base styles for font icons
 // Styles are included in Icon-Mixins.scss
+=======
+  edit: "\f040"
+>>>>>>> 4b7b88fcc81437e5ea88f502635d95240b3b0042
 
+//Base styles for font icons
+//Styles are included in Icon-Mixins.scss
 $icon-styles: (
   font-family: "FontAwesome",
   font-style: normal,
@@ -45,5 +60,5 @@ $icon-styles: (
   font-variant: normal,
   text-transform: none,
   speak: none,
-  line-height: 1,
+  line-height: 1
 );
