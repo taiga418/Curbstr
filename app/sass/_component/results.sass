@@ -5,6 +5,7 @@
 @import '../_mixin/clearfix-mixin'
 @import '../_utility/em-function'
 @import '../_mixin/icons-mixin'
+@import '../_global/icons'
 
 
 table
@@ -134,7 +135,23 @@ h4[data-icon="close"]
   font-size: em(15px)
 
 // map
-
 #map-canvas
+  width: 800px
+  min-height: 800px
+  padding-right: 80px
+
+body
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+
+#result_bottom
+  height: 1.2em
   width: 500px
-  height: 400px
+  background-color: $color-primary
+  text-align: right
+  font-size: 2em
+  color: white
+  @include icon(after, arrow-up)
+  @include icon(before, arrow-down)
+

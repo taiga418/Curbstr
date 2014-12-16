@@ -96,5 +96,4 @@ module.exports = function(grunt) {
   grunt.registerTask('sass:watch', ['watch:sass', 'watch:livereload']);
   grunt.registerTask('test', ['jshint', 'jscs', 'simplemocha']);
   grunt.registerTask('build', ['clean', 'sass', 'browserify:dev', 'browserify:test', 'copy:dev']);
-
 };

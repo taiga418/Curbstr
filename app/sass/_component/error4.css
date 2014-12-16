@@ -1,0 +1,25 @@
+ @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic);
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "icomoon";
+  src: url("fonts/icomoon/icomoon.eot");
+  src: url("fonts/icomoon/icomoon.eot") format("opentype");
+  src: url("fonts/icomoon/icomoon.woff") format("woff");
+  src: url("fonts/icomoon/icomoon.ttf") format("truetype");
+  src: url("fonts/icomoon/icomoon.svg") format("svg"); }
+@-moz-document url-prefix() {
+  .flex-container {
+    width: 100%;
+    -moz-box-sizing: border-box; } }
+.pagenotfound {
+  color: #A1DBB2;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  display: block; }
+  .pagenotfound .msg404 {
+    color: #ff6666;
+    font-size: 1.5em; }
+
+/*# sourceMappingURL=error4.css.map */

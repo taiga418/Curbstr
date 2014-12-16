@@ -1,12 +1,24 @@
 // global
 @import '_global/base';
 @import '_global/variables';
+<<<<<<< HEAD
+@import '_global/icons';
+=======
 //@import '_global/icons';
+>>>>>>> 4b7b88fcc81437e5ea88f502635d95240b3b0042
 // components
 @import '_component/buttons';
 @import '_component/modal';
 @import '_component/home';
+<<<<<<< HEAD
+@import '_component/results';
+@import '_component/error1';
+@import '_component/error2';
+@import '_component/error3';
+@import '_component/error4';
+=======
 //@import '_component/results';
+>>>>>>> 4b7b88fcc81437e5ea88f502635d95240b3b0042
 // layouts
 @import '_layout/grid';
 // mixins
@@ -19,4 +31,10 @@
 @import '_mixin/transform-mixin';
 //@import '_mixin/icons-mixin';
 // utility
+<<<<<<< HEAD
 @import '_utility/em-function';
+//font
+@import "/Library/Ruby/Gems/2.0.0/gems/font-awesome-sass-4.2.2/assets/stylesheets/font-awesome";
+=======
+@import '_utility/em-function';
+>>>>>>> 4b7b88fcc81437e5ea88f502635d95240b3b0042

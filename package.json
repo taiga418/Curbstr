@@ -47,6 +47,11 @@
     "grunt-sass": "^0.17.0",
     "jwt-simple": "^0.2.0",
     "mongoose": "^3.8.18",
+<<<<<<< HEAD
+    "node-bourbon": "^1.2.3",
+    "node-sass": "^1.2.3",
+=======
+>>>>>>> 4b7b88fcc81437e5ea88f502635d95240b3b0042
     "passport": "^0.2.1",
     "passport-http": "^0.2.2",
     "request": "^2.51.0"
