@@ -106,5 +106,41 @@
     "email": "gary@example.com",
     "loc": [ -122.336212, 47.6235481 ],
     "publish": true
+  },
+  {
+    "_id": ObjectId("5493c2fac5da0100002c2867"),
+    "userId": ObjectId("5493c2fac5da0100002c2856"),
+    "title": "I'm moving!",
+    "description": "Some words about a sale. Totally optional of course.",
+    "address": "511 Boren Ave North",
+    "city": "San Francisco",
+    "state": "CA",
+    "zip": "94102",
+    "dateStart": "1/24/2014",
+    "dateEnd": "1/25/2014",
+    "timeStart": "1700",
+    "timeEnd": "1900",
+    "phone": "206-123-234",
+    "email": "foo@example.com",
+    "loc": [ -122.4339624, 37.7748147 ],
+    "publish": true
+  },
+  {
+    "_id": ObjectId("5493c2fac5da0100002c2867"),
+    "userId": ObjectId("5493c2fac5da0100002c2856"),
+    "title": "I'm moving again!",
+    "description": "Some words about a sale. Totally optional of course.",
+    "address": "511 Boren Ave North",
+    "city": "San Francisco",
+    "state": "CA",
+    "zip": "94102",
+    "dateStart": "1/26/2014",
+    "dateEnd": "1/27/2014",
+    "timeStart": "1700",
+    "timeEnd": "1900",
+    "phone": "206-123-234",
+    "email": "foo@example.com",
+    "loc": [ -122.4339624, 37.7748147 ],
+    "publish": true
   }
 ]
