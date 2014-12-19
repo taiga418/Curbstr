@@ -63,5 +63,18 @@
     "state": "NY",
     "zip": 020202,
     "phone": "916-234-2342"
+  },
+  {
+    "_id": ObjectId("5493c2fac5da0100002c2856"),
+    "basic": {
+      "email": "baz@example.com",
+      "password": "$2a$08$NztmnsmD4hJhQEgGd3bzQOQdKxjDZ1738XnUKflyA0zPtANSeXhsy"
+    },
+    "firstName": "Franz",
+    "lastName": "Fernando",
+    "city": "San Francisco",
+    "state": "NY",
+    "zip": 94102,
+    "phone": "917-234-2342"
   }
 ]
