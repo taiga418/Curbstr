@@ -1,5 +1,6 @@
 /*jscs:disable requireCamelCaseOrUpperCaseIdentifiers*/
 'use strict';
+var _ = require('underscore');
 
 module.exports = function(app) {
   app.controller('UploadGallery', ['$rootScope', '$scope', '$upload', 'EVENTS', 'ItemSave', '$http', function($rootScope, $scope, $upload, EVENTS, ItemSave, $http) {
@@ -32,12 +33,10 @@ module.exports = function(app) {
         data: {upload_preset: 'osxh5dpi'},
         file: image
       }).progress(function() {
-
       }).success(function(data) {
-
         $scope.image.url = data.url;
         var splitUrl = $scope.image.url.split('upload/');
-        $scope.image.url = splitUrl[0] + 'upload/w_100,h_100,c_scale/' + splitUrl[1];
+        $scope.image.url = splitUrl[0] + 'upload/w_500,h_500,c_scale/' + splitUrl[1];
         $scope.image.alt = data.public_id;
         $rootScope.$broadcast(EVENTS.itemEditAttempt);
       });
@@ -56,6 +55,18 @@ module.exports = function(app) {
       .error(function(err) {
         alert(err);
       });
+    };
+
+    $scope.delete = function(oneItem) {
+      ItemSave.deleteItem(oneItem)
+      .success(function() {
+        $scope.listItems = _.without($scope.listItems, oneItem);
+      })
+      .error(function(err) {
+        alert(err);
+      });
+      $rootScope.$broadcast(EVENTS.existingEditFinished);
+      $rootScope.$broadcast(EVENTS.itemEditFinished);
     };
 
     $scope.saveItem = function(titleName, description, condition, url) {
