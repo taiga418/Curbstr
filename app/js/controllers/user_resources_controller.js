@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(app) {
-  app.controller('UserResourcesController', ['$scope', '$cookies', 'ItemSave', 'SaleSave', '$location', function($scope, $cookies, ItemSave, SaleSave, $location) {
+  app.controller('UserResourcesController', ['$scope', '$cookies', 'ItemSave', 'SaleSave', function($scope, $cookies, ItemSave, SaleSave) {
     $scope.errors = [];
     $scope.eventExist = false;
 
@@ -22,6 +22,6 @@ module.exports = function(app) {
 
     $scope.back = function() {
      $scope.changeDirective('landingPage');
-    }
+    };
   }]);
 };
