@@ -1,4 +1,4 @@
-![travis badge](https://travis-ci.org/DrivewayHunt/DrivewayHunt.svg)
+![travis badge](https://travis-ci.org/Curbstr/Curbstr.svg)
 
 Curbstr
 ===========================
